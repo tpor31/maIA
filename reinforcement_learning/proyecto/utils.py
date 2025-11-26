@@ -63,13 +63,13 @@ def generate_video_with_qvalues(agent, output_filename='agent_maze.gif', fps=2, 
         for goal_row, goal_col in agent.env.goal_states:
             ax.add_patch(patches.Rectangle((goal_col, goal_row), 1, 1,
                                            facecolor='#68FF33', alpha=0.6, edgecolor='black', linewidth=1))
-        ax.text(goal_col + 0.5, goal_row + 0.5, 'META',
+            ax.text(goal_col + 0.5, goal_row + 0.5, 'META',
                 ha='center', va='center', fontsize=10, color='darkgreen', weight='bold')
 
     def draw_qvalues(ax, state):
         """Dibuja los valores Q de las acciones posibles desde el estado actual"""
         row, col = state
-        possible_actions = agent.env.get_possible_actions(state)
+        possible_actions = agent.env.get_possible_actions(state, agent.all_actions)
 
         action_positions = {
             'up': (col + 0.5, row + 0.15),
@@ -139,6 +139,7 @@ def generate_video_with_qvalues(agent, output_filename='agent_maze.gif', fps=2, 
         draw_path(ax, frame_idx)
 
         if not is_last:
+            #print(agent.all_actions)
             draw_qvalues(ax, current_state)
 
         draw_agent(ax, current_state, is_last)
