@@ -267,7 +267,7 @@ El código detecta automáticamente:
 ## 📚 Referencias
 
 - Sutton, R. S., & Barto, A. G. (2018). *Reinforcement Learning: An Introduction*
-- Watkins, C. J., & Dayan, P. (1992). Q-learning. *Machine learning*
+- Curso Aprendizaje por refuerzo (2025). Maestria Inteligencia artificial MaIA - Universidad de los Andes
 
 ## 👥 Autor
 
