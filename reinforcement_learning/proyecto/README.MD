@@ -91,6 +91,8 @@ EPSILON_DECAY = 0.99         # Decaimiento de epsilon por episodio
 MAX_STEPS_EPISODE = 50       # Máximo de pasos por episodio
 MAZE = 'laberintos/project_lab_v2.txt'  # Archivo del laberinto
 ALL_ACTIONS = True           # Considerar acciones inválidas
+SAVE_BEST_POLICY = True      # Guardar la mejor política durante el entrenamiento
+BEST_POLICY_FILE = "qtables/best_qtable_policy.json"
 ```
 
 ### 4. Entrenar el Agente
